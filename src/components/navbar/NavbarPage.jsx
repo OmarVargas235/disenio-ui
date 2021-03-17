@@ -1,23 +1,24 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { ContainerNavbar, ButtonToggle } from './style.js';
 import img from '../../assets/img/perfil/perfil2.png';
 
 const NavbarPage = () => (
-	<ContainerNavbar>
+	<ContainerNavbar className="pb-4">
 		<header>
 			<img src={img} alt="img1" className="img-fluid mb-3" />
 			<p className="mb-1 text-light font-weight-bold">Samantha</p>
-			<p>correo@correo.com</p>
+			<p className="mb-2">correo@correo.com</p>
 		</header>
 
-		<nav className="navbar px-0 mb-5 navbar-dark">
+		<nav className="navbar px-0 mb-4 navbar-dark">
 			<ul className="navbar-nav">
 				<li className="nav-item active">
-					<a href="/" className="nav-link">Design</a>
+					<NavLink to="/design" className="nav-link">Design</NavLink>
 				</li>
 
 				<li className="nav-item">
-					<a href="/" className="nav-link">Barbeque</a>
+					<NavLink to="/barbeque" className="nav-link">Barbeque</NavLink>
 				</li>
 
 				<li className="nav-item">
