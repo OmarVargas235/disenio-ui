@@ -4,7 +4,7 @@ import { ContainerNavbar, ButtonToggle } from './style.js';
 import img from '../../assets/img/perfil/perfil2.png';
 
 const NavbarPage = () => (
-	<ContainerNavbar className="pb-4">
+	<ContainerNavbar>
 		<header>
 			<img src={img} alt="img1" className="img-fluid mb-3" />
 			<p className="mb-1 text-light font-weight-bold">Samantha</p>
@@ -13,7 +13,7 @@ const NavbarPage = () => (
 
 		<nav className="navbar px-0 mb-4 navbar-dark">
 			<ul className="navbar-nav">
-				<li className="nav-item active">
+				<li className="nav-item">
 					<NavLink to="/design" className="nav-link">Design</NavLink>
 				</li>
 
@@ -22,19 +22,15 @@ const NavbarPage = () => (
 				</li>
 
 				<li className="nav-item">
-					<a href="/" className="nav-link">Productivity</a>
+					<NavLink to="/productivity" className="nav-link">Productivity</NavLink>
 				</li>
 
 				<li className="nav-item">
-					<a href="/" className="nav-link">Workout</a>
+					<NavLink to="/book" className="nav-link">Books</NavLink>
 				</li>
 
 				<li className="nav-item">
-					<a href="/" className="nav-link">Books</a>
-				</li>
-
-				<li className="nav-item">
-					<a href="/" className="nav-link">Time</a>
+					<NavLink to="/time" className="nav-link">Time</NavLink>
 				</li>
 			</ul>
 		</nav>

@@ -9,7 +9,6 @@ export const ContainerBarbequeStyle = styled.section`
 	img {
 		height: 100%;
 		width: 100%;
-		display: block;
 		border-radius: 20px;
 	}
 

@@ -6,15 +6,18 @@ import Navbar from './components/navbar/';
 import Header from './components/header/';
 import Design from './components/design/';
 import Barbeque from './components/barbeque/';
+import Productivity from './components/productivity/';
+import Book from './components/book/';
+import Time from './components/time/';
 
 const GlobalStyle = styled.section`
 	background-color: #101010;
 	overflow: hidden;
 	border-radius: 14px;
 	width: 100%;
-	max-height: 90vh;
+	height: 90vh;
 
-	p, a {
+	p, a, li {
 		color: #4B4A4A;
 	}
 
@@ -29,16 +32,27 @@ const App = () => {
 		<div className="container d-flex justify-content-center">
 			<Router>
 				<GlobalStyle className="row no-gutters pt-5">
-					<div className="col-4 d-flex justify-content-center">
+					<div className="col-4 d-flex justify-content-center pt-5">
 						<Navbar />
 					</div>
 				
-					<div className="col-8 d-flex flex-column align-items-center justify-content-center">
+					<div className="col-8 d-flex flex-column justify-content-center">
 						<Header />
 						
+						<ul className="nav my-4">
+							<li className="nav-item mr-4 text-light">All</li>
+							<li className="nav-item mr-4">Videos</li>
+							<li className="nav-item mr-4">Notes</li>
+							<li className="nav-item mr-4">Music</li>
+							<li className="nav-item">To-do-list</li>
+						</ul>
+
 						<Switch>
 							<Route exact path="/design" component={ Design } />
 							<Route exact path="/barbeque" component={ Barbeque } />
+							<Route exact path="/productivity" component={ Productivity } />
+							<Route exact path="/book" component={ Book } />
+							<Route exact path="/time" component={ Time } />
 
 							<Redirect from="/" to="/design" />
 						</Switch>
@@ -50,7 +64,3 @@ const App = () => {
 }
 
 export default App;
-
-							// <Route exact path="/productivity" component={ Productivity } />
-							// <Route exact path="/books" component={ Books } />
-							// <Route exact path="/time" component={ Time } />
