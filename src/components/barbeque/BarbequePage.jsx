@@ -6,7 +6,7 @@ import barbeque2 from '../../assets/img/barbeque/barbeque2.jpg';
 const BarbequePage = () => {
 	
 	return (
-		<ContainerBarbequeStyle className="container-fluid">
+		<ContainerBarbequeStyle className="container-fluid pl-md-0">
 			
 			<img src={barbeque1} alt="barbeque1" className="img-fluid" />
 

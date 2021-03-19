@@ -1,10 +1,19 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { ContainerNavbar, ButtonToggle } from './style.js';
+import { ReactComponent as Close } from '../../assets/icons/close.svg';
 import img from '../../assets/img/perfil/perfil2.png';
 
-const NavbarPage = () => (
-	<ContainerNavbar>
+const NavbarPage = ({ setIsActiveMenu }) => (
+	<ContainerNavbar className="align-self-center align-self-md-start">
+		
+		<div className="w-100 text-right d-block d-md-none">
+			<Close 
+				className="text-right"
+				onClick={() => setIsActiveMenu(false)}
+			/>
+		</div>
+
 		<header>
 			<img src={img} alt="img1" className="img-fluid mb-3" />
 			<p className="mb-1 text-light font-weight-bold">Samantha</p>

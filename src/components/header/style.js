@@ -32,4 +32,37 @@ export const ContainerHeader = styled.header`
 		height: 35px;
 		border-radius: 10px;
 	}
+
+	@media (max-width: 440px) {
+		h2 {
+			font-size: 1.4rem;
+		}
+
+		.container-icon {
+			width: 25px;
+			height: 25px;
+		}
+
+		.container-plus-red {
+			width: 30px;
+			height: 30px;
+
+			svg {
+				width: 15px;
+				height: 15px;
+			}
+		}
+	}
+
+	@media (max-width: 380px) {
+		.container-icon {
+			width: 15px !important;
+			height: 15px !important;
+
+			svg {
+				width: 10px;
+				height: 10px;
+			}
+		}
+	}
 `;

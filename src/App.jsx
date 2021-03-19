@@ -1,5 +1,4 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useState, useEffect, useRef } from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import './assets/bootstrap.min.css';
 import Navbar from './components/navbar/';
@@ -9,37 +8,55 @@ import Barbeque from './components/barbeque/';
 import Productivity from './components/productivity/';
 import Book from './components/book/';
 import Time from './components/time/';
-
-const GlobalStyle = styled.section`
-	background-color: #101010;
-	overflow: hidden;
-	border-radius: 14px;
-	width: 100%;
-	height: 90vh;
-
-	p, a, li {
-		color: #4B4A4A;
-	}
-
-	@media (min-width: 992px) {
-		width: 70%;
-	}
-`;
+import { GlobalStyle, ContainerNav } from './style';
+import { ReactComponent as Btn } from './assets/icons/btn-toggle.svg';
 
 const App = () => {
+	
+	const layautRef = useRef();
+
+	const [isActiveMenu, setIsActiveMenu] = useState(false);
+	const [leftPosition, setLeftPosition] = useState(0);
+
+	useEffect(() => {
+
+		setLeftPosition(layautRef.current.getBoundingClientRect().left);
+
+		function resizeMedia() {
+			
+			setLeftPosition(layautRef.current.getBoundingClientRect().left);
+		}
+		
+		window.addEventListener('resize', resizeMedia);
+
+		return () => window.removeEventListener('resize', resizeMedia);
+		
+	}, []);
 
 	return (
-		<div className="container d-flex justify-content-center">
+		<div className="container d-flex justify-content-center" ref={layautRef}>
 			<Router>
-				<GlobalStyle className="row no-gutters pt-5">
-					<div className="col-4 d-flex justify-content-center pt-5">
-						<Navbar />
-					</div>
-				
-					<div className="col-8 d-flex flex-column justify-content-center">
+				<GlobalStyle className="row no-gutters">
+					<ContainerNav 
+						className="col-md-4 d-flex justify-content-center mt-md-5 pt-md-5" 
+						isActiveMenu={isActiveMenu}
+						leftPosition={leftPosition}
+					>
+						<Navbar 
+							isActiveMenu={isActiveMenu}
+							setIsActiveMenu={setIsActiveMenu}
+						/>
+					</ContainerNav>
+					
+					<Btn 
+						className="d-block d-md-none btn"
+						onClick={() => setIsActiveMenu(true)}
+					/>
+
+					<div className="col-12 col-md-8 d-flex flex-column justify-content-center pt-5">
 						<Header />
 						
-						<ul className="nav my-4">
+						<ul className="nav my-4 d-flex justify-content-center justify-content-md-start">
 							<li className="nav-item mr-4 text-light">All</li>
 							<li className="nav-item mr-4">Videos</li>
 							<li className="nav-item mr-4">Notes</li>

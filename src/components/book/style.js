@@ -27,4 +27,15 @@ export const ContainerBookStyle = styled.section`
 	img:nth-child(8) {
 		bottom: 110%;
 	}
+
+	@media (max-width: 767px) and (min-width: 510px) {
+		img:nth-child(2) {
+			height: 300px;
+		}
+
+		img:nth-child(4) {
+			height: 150px;
+			bottom: 65%;
+		}
+	}
 `;

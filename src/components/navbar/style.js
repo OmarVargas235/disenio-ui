@@ -6,6 +6,12 @@ export const ContainerNavbar = styled.section`
 		height: 60px;
 		border-radius: 8px;
 	}
+	
+	svg {
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+	}
 `;
 
 // =====================================

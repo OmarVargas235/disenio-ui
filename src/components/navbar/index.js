@@ -1,10 +1,12 @@
 import React from 'react';
 import NavbarPage from './NavbarPage';
 
-const Navbar = () => {
+const Navbar = ({ setIsActiveMenu }) => {
 	
 	return (
-		<NavbarPage />
+		<NavbarPage 
+			setIsActiveMenu={setIsActiveMenu}
+		/>
 	)
 }
 

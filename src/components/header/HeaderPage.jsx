@@ -7,7 +7,7 @@ import { ContainerHeader } from './style.js';
 
 const HeaderPage = () => (
 	
-	<ContainerHeader className="d-flex">
+	<ContainerHeader className="d-flex justify-content-center justify-content-md-start px-2">
 		<h2 className="text-light mr-4">Design</h2>
 
 		<div className="d-flex mr-5">

@@ -12,7 +12,7 @@ import books8 from '../../assets/img/books/books8.jpg';
 const BookPage = () => {
 	
 	return (
-		<ContainerBookStyle className="container-fluid">
+		<ContainerBookStyle className="container-fluid pl-md-0">
 			
 			<img src={books1} alt="books1" className="img-fluid" />
 			<img src={books2} alt="books2" className="img-fluid" />

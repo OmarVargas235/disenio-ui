@@ -8,17 +8,13 @@ import productivity4 from '../../assets/img/productivity/productivity4.jpg';
 const ProductivityPage = () => {
 	
 	return (
-		<ContainerProductivityStyle className="container-fluid">
+		<ContainerProductivityStyle className="container-fluid pl-md-0">
 			
-			<div className="grid-item-1">
-				<img src={productivity1} alt="productivity1" className="img-fluid" />
-			</div>
+			<img src={productivity1} alt="productivity1" className="img-fluid" />
 
-			<div className="grid-item-2 text-center">
-				<img src={productivity2} alt="productivity2" className="img-fluid" />
-			</div>
+			<img src={productivity2} alt="productivity2" className="img-fluid" />
 
-			<div className="grid-item-3 d-flex align-item-end">
+			<div className="d-flex align-item-end">
 				<img src={productivity3} alt="productivity3" className="img-fluid" />
 			</div>
 

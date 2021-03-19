@@ -7,7 +7,7 @@ import { ContainerDesignStyle } from './style.js';
 const DesignPage = () => {
 	
 	return (
-		<ContainerDesignStyle className="container-fluid">
+		<ContainerDesignStyle className="container-fluid pl-md-0">
 			<img className="img-fluid" src={disign1} alt="disign-1" />
 
 			<div className="box box-1"></div>

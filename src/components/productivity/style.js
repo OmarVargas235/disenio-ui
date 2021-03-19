@@ -10,16 +10,19 @@ export const ContainerProductivityStyle = styled.section`
 		border-radius: 20px;
 	}
 
-	.grid-item-2 {
-		grid-column: 2 / 4;
-	}
-
-	.grid-item-3 {
-		position: relative;
-		bottom: 20%;
-	}
-
 	.grid-item-4 {
-		grid-column: 2 / 4;
+		grid-column: 2 / 3;
+		position: relative;
+		bottom: 60%;
+	}
+
+	@media (min-width: 840px) {
+		.grid-item-4 {
+			bottom: 35%;
+
+			img {
+				height: 250px;
+			}
+		}
 	}
 `;

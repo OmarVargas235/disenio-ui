@@ -7,7 +7,7 @@ import time3 from '../../assets/img/time/time3.jpg';
 const TimePage = () => {
 	
 	return (
-		<ContainerTimeStyle className="container-fluid">
+		<ContainerTimeStyle className="container-fluid pl-md-0">
 			
 			<img src={time1} alt="time1" className="img-fluid" />
 			<img src={time2} alt="time2" className="img-fluid" />
