@@ -1,10 +1,10 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import { ContainerNavbar, ButtonToggle } from './style.js';
 import { ReactComponent as Close } from '../../assets/icons/close.svg';
 import img from '../../assets/img/perfil/perfil2.png';
+import LinkNavabar from '../../layaut/LinkNavabar';
 
-const NavbarPage = ({ setIsActiveMenu }) => (
+const NavbarPage = ({ setIsActiveMenu, changeLayaut }) => (
 	<ContainerNavbar className="align-self-center align-self-md-start">
 		
 		<div className="w-100 text-right d-block d-md-none">
@@ -23,23 +23,43 @@ const NavbarPage = ({ setIsActiveMenu }) => (
 		<nav className="navbar px-0 mb-4 navbar-dark">
 			<ul className="navbar-nav">
 				<li className="nav-item">
-					<NavLink to="/design" className="nav-link">Design</NavLink>
+					<LinkNavabar 
+						url='/design'
+						changeLayaut={changeLayaut}
+						text='Design'
+					/>
 				</li>
 
 				<li className="nav-item">
-					<NavLink to="/barbeque" className="nav-link">Barbeque</NavLink>
+					<LinkNavabar 
+						url='/barbeque'
+						changeLayaut={changeLayaut}
+						text='Barbeque'
+					/>
 				</li>
 
 				<li className="nav-item">
-					<NavLink to="/productivity" className="nav-link">Productivity</NavLink>
+					<LinkNavabar 
+						url='/productivity'
+						changeLayaut={changeLayaut}
+						text='Productivity'
+					/>
 				</li>
 
 				<li className="nav-item">
-					<NavLink to="/book" className="nav-link">Books</NavLink>
+					<LinkNavabar 
+						url='/book'
+						changeLayaut={changeLayaut}
+						text='Books'
+					/>
 				</li>
 
 				<li className="nav-item">
-					<NavLink to="/time" className="nav-link">Time</NavLink>
+					<LinkNavabar 
+						url='/time'
+						changeLayaut={changeLayaut}
+						text='Time'
+					/>
 				</li>
 			</ul>
 		</nav>
