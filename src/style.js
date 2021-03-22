@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const GlobalStyle = styled.section`
-	background-color: #101010;
+	transition: .2s background-color ease-in;
+	background-color: ${props => props.isDark ? '#101010' : 'white'};
 	overflow: hidden;
 	border-radius: 14px;
 	width: 100%;
@@ -11,8 +12,17 @@ export const GlobalStyle = styled.section`
 		color: #4B4A4A;
 	}
 
+	.navbar .nav-link {
+		transition: .2s color ease-in;
+		color: ${props => props.isDark ? ' rgba(255,255,255,.5);' : '#808780'};
+
+		&:hover {
+			color: ${props => props.isDark ? 'rgba(255,255,255,.75)' : 'rgba(0,0,0, .9)'};
+		}
+	}
+
 	.btn {
-		fill: white;
+		fill: ${props => props.isDark ? 'white' : '#101010'};
 		position: absolute;
 		z-index: 1;
 	}
@@ -43,7 +53,7 @@ export const GlobalStyle = styled.section`
 export const ContainerNav = styled.section`
 	@media (max-width: 767px) {
 		position: absolute;
-		background-color: #191919;
+		background-color: ${props => props.isDark ? '#191919' : 'white'};
 		z-index: 2;
 		height: 90vh;
 		border-top-left-radius: 14px;
@@ -51,7 +61,7 @@ export const ContainerNav = styled.section`
 		width: 30%;
 		
 		${props => (`
-			left: ${props.isActiveMenu ? `${props.leftPosition + 17}px` : '-100%'};
+			left: ${props.isActiveMenu ? `${props.leftPosition + 15}px` : '-100%'};
 		`)}
 	}
 

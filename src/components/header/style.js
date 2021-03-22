@@ -14,13 +14,13 @@ export const ContainerHeader = styled.header`
 	}
 
 	.container-icon {
-		border: 2px solid white;
+		border: 2px solid ${props => props.isDark ? 'white' : '#191919'};
 		width: 30px;
 		height: 30px;
 		border-radius: 50%;
 
 		svg {
-			fill: white;
+			fill: ${props => props.isDark ? 'white' : '#191919'};
 			width: 15px;
 			height: 15px;
 		}

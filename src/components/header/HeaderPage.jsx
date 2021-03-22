@@ -5,10 +5,13 @@ import img3 from '../../assets/img/perfil/perfil4.jpg';
 import { ReactComponent as Plus } from '../../assets/icons/plus.svg';
 import { ContainerHeader } from './style.js';
 
-const HeaderPage = () => (
+const HeaderPage = ({ isDark }) => (
 	
-	<ContainerHeader className="d-flex justify-content-center justify-content-md-start px-2">
-		<h2 className="text-light mr-4">Design</h2>
+	<ContainerHeader 
+		className="d-flex justify-content-center justify-content-md-start px-2" 
+		isDark={isDark}
+	>
+		<h2 className={`text-${isDark ? 'light' : 'black'} mr-4`}>Design</h2>
 
 		<div className="d-flex mr-5">
 			<img src={img1} alt="img1" className="img-fluid" />

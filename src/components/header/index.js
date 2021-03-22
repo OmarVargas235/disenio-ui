@@ -1,10 +1,12 @@
 import React from 'react';
 import HeaderPage from './HeaderPage';
 
-const Header = () => {
+const Header = ({ isDark }) => {
 	
 	return (
-		<HeaderPage />
+		<HeaderPage 
+			isDark={isDark}
+		/>
 	)
 }
 

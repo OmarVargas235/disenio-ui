@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import NavbarPage from './NavbarPage';
 import { ContextInProp } from '../../context/ContextInProp';
 
-const Navbar = ({ history, setIsActiveMenu }) => {
+const Navbar = ({ history, setIsActiveMenu, isDark, setIsDark }) => {
 
 	const { setInProp } = useContext( ContextInProp );
 
@@ -19,6 +19,8 @@ const Navbar = ({ history, setIsActiveMenu }) => {
 		<NavbarPage 
 			setIsActiveMenu={setIsActiveMenu}
 			changeLayaut={changeLayaut}
+			isDark={isDark}
+			setIsDark={setIsDark}
 		/>
 	)
 }

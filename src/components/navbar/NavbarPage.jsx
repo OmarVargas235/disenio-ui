@@ -4,7 +4,7 @@ import { ReactComponent as Close } from '../../assets/icons/close.svg';
 import img from '../../assets/img/perfil/perfil2.png';
 import LinkNavabar from '../../layaut/LinkNavabar';
 
-const NavbarPage = ({ setIsActiveMenu, changeLayaut }) => (
+const NavbarPage = ({ setIsActiveMenu, changeLayaut, isDark, setIsDark }) => (
 	<ContainerNavbar className="align-self-center align-self-md-start">
 		
 		<div className="w-100 text-right d-block d-md-none">
@@ -16,7 +16,7 @@ const NavbarPage = ({ setIsActiveMenu, changeLayaut }) => (
 
 		<header>
 			<img src={img} alt="img1" className="img-fluid mb-3" />
-			<p className="mb-1 text-light font-weight-bold">Samantha</p>
+			<p className={`mb-1 text-${isDark ? 'light' : 'dark'} font-weight-bold`}>Samantha</p>
 			<p className="mb-2">correo@correo.com</p>
 		</header>
 
@@ -27,6 +27,7 @@ const NavbarPage = ({ setIsActiveMenu, changeLayaut }) => (
 						url='/design'
 						changeLayaut={changeLayaut}
 						text='Design'
+						active={isDark ? 'white' : 'black'}
 					/>
 				</li>
 
@@ -35,6 +36,7 @@ const NavbarPage = ({ setIsActiveMenu, changeLayaut }) => (
 						url='/barbeque'
 						changeLayaut={changeLayaut}
 						text='Barbeque'
+						active={isDark ? 'white' : 'black'}
 					/>
 				</li>
 
@@ -43,6 +45,7 @@ const NavbarPage = ({ setIsActiveMenu, changeLayaut }) => (
 						url='/productivity'
 						changeLayaut={changeLayaut}
 						text='Productivity'
+						active={isDark ? 'white' : 'black'}
 					/>
 				</li>
 
@@ -51,6 +54,7 @@ const NavbarPage = ({ setIsActiveMenu, changeLayaut }) => (
 						url='/book'
 						changeLayaut={changeLayaut}
 						text='Books'
+						active={isDark ? 'white' : 'black'}
 					/>
 				</li>
 
@@ -59,6 +63,7 @@ const NavbarPage = ({ setIsActiveMenu, changeLayaut }) => (
 						url='/time'
 						changeLayaut={changeLayaut}
 						text='Time'
+						active={isDark ? 'white' : 'black'}
 					/>
 				</li>
 			</ul>
@@ -69,7 +74,11 @@ const NavbarPage = ({ setIsActiveMenu, changeLayaut }) => (
 			<div className="button-toggle">
 				<input type="checkbox" className="checkbox" id="button-toggle" />
 
-				<label htmlFor="button-toggle" className="container-toggle__label">
+				<label 
+					htmlFor="button-toggle"
+					className="container-toggle__label"
+					onClick={() => setIsDark( !isDark )}
+				>
 					<div className="circle-dark"></div>
 					<div className="circle-light"></div>
 				</label>

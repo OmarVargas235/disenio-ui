@@ -19,6 +19,7 @@ const App = () => {
 
 	const [isActiveMenu, setIsActiveMenu] = useState(false);
 	const [leftPosition, setLeftPosition] = useState(0);
+	const [isDark, setIsDark] = useState(true);
 
 	useEffect(() => {
 		
@@ -39,9 +40,10 @@ const App = () => {
 	return (
 		<div className="container d-flex justify-content-center" ref={layautRef}>
 			<Router>
-				<GlobalStyle className="row no-gutters">
+				<GlobalStyle className="row no-gutters" isDark={isDark}>
 					<ContextInPropProvider>
-						<ContainerNav 
+						<ContainerNav
+							isDark={isDark}
 							className="col-md-4 d-flex justify-content-center mt-md-5 pt-md-5" 
 							isActiveMenu={isActiveMenu}
 							leftPosition={leftPosition}
@@ -49,6 +51,8 @@ const App = () => {
 							<Navbar 
 								isActiveMenu={isActiveMenu}
 								setIsActiveMenu={setIsActiveMenu}
+								isDark={isDark}
+								setIsDark={setIsDark}
 							/>
 						</ContainerNav>
 						
@@ -57,11 +61,16 @@ const App = () => {
 							onClick={() => setIsActiveMenu(true)}
 						/>
 
-						<div className="col-12 col-md-8 d-flex flex-column justify-content-center pt-5">
-							<Header />
+						<div
+							style={{
+								backgroundColor: isDark ? '#101010' : '#F4F6F8', 
+								transition: '.2s background-color ease-in'
+							}}
+							className="col-12 col-md-8 d-flex flex-column justify-content-center pt-5 px-sm-4">
+							<Header isDark={isDark} />
 							
 							<ul className="nav my-4 d-flex justify-content-center justify-content-md-start">
-								<li className="nav-item mr-4 text-light">All</li>
+								<li className={`nav-item mr-4 text-${isDark ? 'light' : 'black'}`}>All</li>
 								<li className="nav-item mr-4">Videos</li>
 								<li className="nav-item mr-4">Notes</li>
 								<li className="nav-item mr-4">Music</li>
