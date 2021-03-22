@@ -10,23 +10,23 @@ export const ContainerTimeStyle = styled.section`
 		border-radius: 20px;
 	}
 
-	.grid-item-4 {
-		grid-column: 4 / 5;
-		grid-row: 1 / 4;
-
-		.box {
-			background-color: #F4CEC6;
-			height: 100%;
-		}
+	.box-1 {
+		background-color: #F4CEC6;
+		height: 100%;
 	}
 
-	.grid-item-5 {
+	.box-2 {
+		background-color: #DADDE5;
+		height: 100%;
+	}
+
+	.grid-item-3 {
+		grid-column: 4 / 5;
+		grid-row: 1 / 4;
+	}
+
+	.grid-item-4 {
 		grid-column: 1 / 4;
 		height: 100px;
-		
-		.box {
-			background-color: #DADDE5;
-			height: 100%;
-		}
 	}
 `;

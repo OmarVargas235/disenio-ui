@@ -9,7 +9,7 @@ export const ContainerDesignStyle = styled.section`
 		border-radius: 10px;
 	}
 
-	.img-1 {
+	img:first-child {
 		grid-column: 1 / 3;
 	}
 
@@ -20,7 +20,7 @@ export const ContainerDesignStyle = styled.section`
 		height: 100%;
 	}
 
-	.img-3 {
+	img:nth-child(3) {
 		grid-row: 2 / 8;
 		height: 100%;
 	}
@@ -31,7 +31,7 @@ export const ContainerDesignStyle = styled.section`
 		grid-row: 2 / 8;
 	}
 
-	.img-5 {
-		transform: translateY(150px);
-	}
+	// .img-5 {
+	// 	transform: translateY(150px);
+	// }
 `;

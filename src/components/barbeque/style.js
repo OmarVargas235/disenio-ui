@@ -12,25 +12,25 @@ export const ContainerBarbequeStyle = styled.section`
 		border-radius: 20px;
 	}
 
-	.grid-item-2 {
+	.grid-item-1 {
 		height: 80%;
 	}
 
-	.grid-item-3 {
+	.grid-item-2 {
 		height: 60%;
 	}
 
-	.grid-item-4 {
+	.grid-item-3 {
 		height: 140%;
 	}
 
-	.grid-item-5 {
+	.grid-item-4 {
 		position: relative;
 		bottom: 27%;
 		height: 160%;
 	}
 
-	.grid-item-6 {
+	.grid-item-5 {
 		position: relative;
 		bottom: 55%;
 		height: 180%;

@@ -10,14 +10,14 @@ export const ContainerProductivityStyle = styled.section`
 		border-radius: 20px;
 	}
 
-	.grid-item-4 {
+	.grid-item-3 {
 		grid-column: 2 / 3;
 		position: relative;
 		bottom: 60%;
 	}
 
 	@media (min-width: 840px) {
-		.grid-item-4 {
+		.grid-item-3 {
 			bottom: 35%;
 
 			img {
